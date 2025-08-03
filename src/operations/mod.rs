@@ -1,5 +1,4 @@
-pub mod factorial;
-pub mod fibonacci;
+pub mod ff;
 pub mod exponential;
 pub mod statistic;
 pub mod logarithm;

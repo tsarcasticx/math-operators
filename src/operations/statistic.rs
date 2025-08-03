@@ -1,6 +1,6 @@
 use std::process::exit;
 
-use crate::operations::user;
+use super::user;
 
 fn decil_grouped() -> String{
     let mut _result = String::new();
@@ -18,7 +18,7 @@ fn decil_grouped() -> String{
         eprintln!("Invalid input: Must be lesser than {_i}");
         exit(1);
     }
-    let _freq = user::user_input_float(format!("\nEnter the actual frequency that the cumulative frequency is just one greater than or equals to {_i}: ").as_str());
+    let _freq = user::user_input_float(format!("\nEnter the actual frequency that the cumulative frequency is just one greater than or equals to {_i} ").as_str());
     if _freq < _i {
         eprintln!("Invalid input: Must be greater than {_i}");
         exit(1);

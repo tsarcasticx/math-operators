@@ -1,7 +1,6 @@
 use std::{process::exit};
 
-use crate::operations::{exponential, fibonacci, 
-    factorial, statistic, logarithm,user};
+use crate::operations::{exponential, ff, statistic, logarithm,user};
 
 mod operations;
 
@@ -16,10 +15,10 @@ fn main() {
         match _choice {
             "0" => {println!("See you next time!"); exit(0);},
             "1" => {let exp = exponential::exponentialis(); println!("\nThe result is {}", exp)},
-            "2" => { let _factorial = factorial::factors();
+            "2" => { let _factorial = ff::factors();
                 println!("\nThe result is {}", _factorial);
             },
-            "3" => fibonacci::fibonaccis(),
+            "3" => ff::fibonaccis(),
             "4" => statistic::statistica(),
             "5" =>logarithm::logaritma(),
             _ => println!("You must input one of three numbers, not anything else"),

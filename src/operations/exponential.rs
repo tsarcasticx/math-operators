@@ -1,4 +1,4 @@
-use crate::operations::user;
+use super::user;
 
 pub fn exponentialis () -> String {
 // basis: f64, expo: i32
@@ -7,7 +7,7 @@ pub fn exponentialis () -> String {
     if expo > 0 {
         let mut b = basis;
         for _i in 1..expo {
-            b = b * basis;
+            b *= basis;
         }
         return b.to_string();
     }
@@ -21,8 +21,8 @@ pub fn exponentialis () -> String {
         let mut _val = String::new();
         let mut _valu = String::from(" or 1/");
         for _i in expo..0 {
-            b = b / basis;
-            c = c * basis;
+            b /= basis;
+            c *= basis;
         }
         _val.push_str(&b.to_string());
         _val.push_str(&_valu);

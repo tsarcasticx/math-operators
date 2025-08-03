@@ -1,4 +1,4 @@
-use crate::user;
+use super::user;
 
 pub fn logaritma() {
     let _base = user::user_input_float("Enter the base: ");
