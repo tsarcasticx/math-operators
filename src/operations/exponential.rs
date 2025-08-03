@@ -1,4 +1,9 @@
-pub fn exponentialis (basis: f64, expo: i32) -> String {
+use crate::operations::user;
+
+pub fn exponentialis () -> String {
+// basis: f64, expo: i32
+    let basis = user::user_input_float("Enter the basis: ");
+    let expo = user::user_input_int("Enter the exponential: ");
     if expo > 0 {
         let mut b = basis;
         for _i in 1..expo {
