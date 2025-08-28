@@ -78,26 +78,20 @@ pub fn statistica() {
             }
             else if _sub_choice == "2" {
                 let daw = user::user_input_string("What data would you like to execute enter the number? \n\x1B[33m[1] Single data \n[2] Grouped data\x1B[37m: ");
-                if daw == "1" {
-                    println!("We haven't done the operation yet");
-                }
-                else if daw == "2" {
-                    println!("the result is {}", decil_grouped());
-                }
-                else {
-                    println!("You must enter between 1 or 2");
+                let dawstr = daw.as_str();
+                match dawstr {
+                    "1" => println!("We haven't done the operation yet"),
+                    "2" => println!("the result is {}", decil_grouped()),
+                    _ => println!("You must enter between 1 or 2")
                 }
             }
             else if _sub_choice == "3" {
                 let daw = user::user_input_string("What data would you like to execute enter the number? \n\x1B[33m[1] Single data \n[2] Grouped data\x1B[37m: ");
-                if daw == "1" {
-                    println!("We haven't done the operation yet");
-                }
-                else if daw == "2" {
-                    println!("\nthe result is {}\n", percentil_grouped());
-                }
-                else {
-                    println!("You must enter between 1 or 2");
+                let dawstr = daw.as_str();
+                match dawstr {
+                    "1" => println!("We haven't done the operation yet"),
+                    "2" => println!("\nthe result is {}\n", percentil_grouped()),
+                    _ => println!("You must enter between 1 or 2")
                 }
             }
 }
